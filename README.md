@@ -10,7 +10,7 @@ This project focuses on building a predictive model to estimate product sales ac
 2. **Data Cleaning**: Handling missing values, fixing data types.
 3. **Exploratory Data Analysis (EDA)**:
    - Visualizing distributions and relationships.
-   - Identifying key features that affect sales.
+   
 
 ## Visualizations
 
