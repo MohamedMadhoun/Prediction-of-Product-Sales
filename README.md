@@ -34,6 +34,12 @@ The heatmap reveals the correlation between numerical features in the dataset. `
 
 ![Correlation Heatmap](heatmap_plot.png.png)
 
+### 5. Scatter Plot of Item MRP vs Outlet Sales
+This scatter plot visualizes the relationship between Item_MRP and Item_Outlet_Sales. The triangular shape shows that as item prices increase, there's a tendency for higher sales values. This supports the positive correlation seen in the heatmap.
+
+
+
+
 ## Conclusion
 
 This project focuses on uncovering insights about factors that affect sales in retail outlets. The next step will involve building a predictive model using the insights drawn from this exploratory data analysis.
