@@ -1,15 +1,33 @@
-# Sales Prediction Project
+# Boost Retail Sales with Predictive Modeling  
+## Analyzing product and outlet features to improve sales forecasts  
 
-This project focuses on building a predictive model to estimate product sales across various retail outlets, using features related to both the products and the stores.
+**Author:** Mohammed Al Madhoun  
+
+---
+
+### Business problem:
+
+Retailers struggle to balance inventory and sales across multiple outlets, leading to overstock or lost sales. The business problem is to accurately predict product sales at various retail outlets to optimize inventory management and increase profitability.
+
+---
+
+### Data:
+
+- Dataset source: Retail sales data (e.g., BigMart Sales dataset)  
+- Number of observations: 8,523 rows  
+- Features include: Product attributes (price, category, visibility), outlet information (type, size, location), and sales figures.
+
+---
 
 
+## Methods
 
-## Project Steps
+- Data cleaning: Handled missing values for outlet size and product weight to maintain data integrity.  
+- Feature engineering: Created combined categories and encoded categorical variables for modeling.  
+- Exploratory Data Analysis (EDA): Visualized distributions and correlations to identify key factors influencing sales.  
+- Modeling: Built and compared two models — Linear Regression and Random Forest Regressor.
 
-1. **Importing Data** from a CSV file.
-2. **Data Cleaning**: Handling missing values, fixing data types.
-3. **Exploratory Data Analysis (EDA)**:
-   - Visualizing distributions and relationships.
+---
    
 
 ## Visualizations
@@ -39,12 +57,47 @@ This scatter plot visualizes the relationship between Item_MRP and Item_Outlet_S
 
 ![item_mrp_scatter](Photos/item_mrp_vs_sales.png)
 
+---
+
+## Model Performance
+
+### 1. Linear Regression
+
+| Dataset        | MAE    | MSE          | RMSE    | R²    |
+|----------------|--------|--------------|---------|-------|
+| Training Data  | 847.13 | 1,297,557.06 | 1,139.10| 0.562 |
+| Test Data      | 804.13 | 1,194,409.34 | 1,092.89| 0.567 |
+
+### 2. Random Forest Regression
+
+| Dataset        | MAE    | MSE          | RMSE    | R²    |
+|----------------|--------|--------------|---------|-------|
+| Training Data  | 640.64 | 820,232.55   | 905.67  | 0.723 |
+| Test Data      | 737.13 | 1,123,247.95 | 1,059.83| 0.593 |
+
+**Interpretation:**  
+Random Forest outperforms Linear Regression in training and testing datasets, showing higher accuracy (higher R²) and lower errors (MAE, RMSE). This indicates Random Forest better captures complex relationships in the data, making it more suitable for sales prediction.
+
+---
+
+## Recommendations:
+
+- Use Random Forest model predictions to optimize stock levels per outlet, reducing waste and missed sales.  
+- Target marketing efforts on high-potential products identified by the model.  
+- In future iterations, incorporate temporal and promotional data for improved forecasting.
+
+---
+
+## Limitations & Next Steps
+
+- Models currently do not consider seasonality or external economic variables.  
+- Explore more advanced algorithms and additional feature engineering to enhance performance.  
+- Deploy model into real-time dashboards or APIs for dynamic decision making.
+
+---
+
+### For further information
+
+For questions or collaboration, please contact **mohammed.madhoun.ds@gmail.com**  
 
 
-## Conclusion
-
-This project focuses on uncovering insights about factors that affect sales in retail outlets. The next step will involve building a predictive model using the insights drawn from this exploratory data analysis.
-
-## Data Cleaning
-
-The dataset underwent several steps of data cleaning, including handling missing values, addressing outliers, and encoding categorical variables. These steps were crucial for ensuring the dataset was ready for analysis and modeling.
