@@ -98,6 +98,6 @@ Random Forest outperforms Linear Regression in training and testing datasets, sh
 
 ### For further information
 
-For questions or collaboration, please contact **mohammed.madhoun.ds@gmail.com**  
+For questions or collaboration, please contact **mohammed.azm2020@gmail.com**  
 
 
