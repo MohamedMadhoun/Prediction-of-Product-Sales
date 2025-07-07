@@ -79,6 +79,56 @@ This scatter plot visualizes the relationship between Item_MRP and Item_Outlet_S
 Random Forest outperforms Linear Regression in training and testing datasets, showing higher accuracy (higher R²) and lower errors (MAE, RMSE). This indicates Random Forest better captures complex relationships in the data, making it more suitable for sales prediction.
 
 ---
+### 3. Linear Regression Model - Coefficient Analysis
+
+Our Linear Regression model helps us understand the direct impact of various features on the target variable. The coefficients indicate the change in the target variable for a one-unit change in the feature, holding other features constant.
+
+Below is the plot showing the top 15 largest coefficients from our Linear Regression model:
+
+![Linear Regression Coefficients Plot](linear_regression_top10_coeffs.png)
+*Replace `linear_regression_coefficients.png` with the actual path to your image file.*
+
+**Interpretation of Coefficients:**
+
+The top 3 most impactful features based on their coefficients are:
+
+1.  **`cat_Outlet_Type_Supermarket Type3`** with a coefficient of **1529.768**:
+    *   **Simple Explanation:** This means that outlets categorized as "Supermarket Type3" have a very large positive impact on the predicted variable (likely sales or a similar metric). In other words, if an outlet is of this type, it is expected to perform significantly better compared to other types, increasing the target variable by 1529.768 units.
+
+2.  **`cat_Outlet_Identifier_OUT027`** with a coefficient of **1529.768**:
+    *   **Simple Explanation:** This indicates that the specific outlet identified as "OUT027" also has a very large positive impact on the target variable, almost identical to "Supermarket Type3". This means this particular outlet contributes significantly to increasing the predicted variable by 1529.768 units.
+
+3.  **`cat_Outlet_Type_Supermarket Type1`** with a coefficient of **1289.576**:
+    *   **Simple Explanation:** This feature suggests that outlets of "Supermarket Type1" have a strong positive impact on the target variable, though slightly less than "Supermarket Type3" and "OUT027". If an outlet is of this type, the target variable is expected to increase by 1289.576 units.
+
+In general, large positive coefficients indicate that these features contribute significantly to increasing the predicted value, while negative coefficients suggest they decrease the predicted value.
+
+### 4. Tree-Based Model - Feature Importance (Permutation Importance)
+
+For our tree-based model (e.g., Random Forest, Gradient Boosting), we used Permutation Importance to assess how much each feature contributes to the model's overall performance. A higher importance score indicates a more influential feature.
+
+Here is the plot showing the top 10 features by Permutation Importance:
+
+![Permutation Importance Plot](Top 10 Features by Permutation Importance.png)
+*Replace `permutation_importance.png` with the actual path to your image file.*
+
+**Interpretation of Feature Importance:**
+
+The top 3 most impactful features based on Permutation Importance are:
+
+1.  **`num_Item_MRP`**:
+    *   **Explanation:** This is clearly the most important feature. It indicates that the Maximum Retail Price (MRP) of an item has the largest impact on the variable the model is trying to predict. If the value of `num_Item_MRP` changes, the model's prediction is expected to change significantly. This means the item's price is the strongest factor in determining the outcome.
+
+2.  **`cat_Outlet_Type_Supermarket Type1`**:
+    *   **Explanation:** This is the second most important feature. It suggests that the "Supermarket Type1" outlet type has a substantial impact on the model's performance. This means that an outlet being of this specific type significantly influences the target variable, making it a key factor to consider.
+
+3.  **`cat_Outlet_Type_Supermarket Type3`**:
+    *   **Explanation:** This is the third most important feature. It indicates that the "Supermarket Type3" outlet type also has a significant impact on the model's performance, though slightly less than "Supermarket Type1". This means this type of outlet plays an important role in determining the predicted outcome.
+
+In summary, this chart shows that the item's price (MRP) is the most influential factor, followed by the outlet type, with "Supermarket Type1" and "Supermarket Type3" being among the most important outlet types affecting the results.
+
+---
+
 
 ## Recommendations:
 
