@@ -109,7 +109,7 @@ For our tree-based model (e.g., Random Forest, Gradient Boosting), we used Permu
 
 Here is the plot showing the top 10 features by Permutation Importance:
 
-![Permutation Importance Plot](Photos/Top 10 Features by Permutation Importance.png)
+![Permutation Importance Plot](Photos/Top_10_Features_by_Permutation_Importance.png)
 
 
 **Interpretation of Feature Importance:**
