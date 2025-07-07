@@ -86,7 +86,7 @@ Our Linear Regression model helps us understand the direct impact of various fea
 Below is the plot showing the top 15 largest coefficients from our Linear Regression model:
 
 ![Linear Regression Coefficients Plot](Photos/linear_regression_top10_coeffs.png)
-*Replace `linear_regression_coefficients.png` with the actual path to your image file.*
+
 
 **Interpretation of Coefficients:**
 
@@ -110,7 +110,7 @@ For our tree-based model (e.g., Random Forest, Gradient Boosting), we used Permu
 Here is the plot showing the top 10 features by Permutation Importance:
 
 ![Permutation Importance Plot](Photos/Top 10 Features by Permutation Importance.png)
-*Replace `permutation_importance.png` with the actual path to your image file.*
+
 
 **Interpretation of Feature Importance:**
 
